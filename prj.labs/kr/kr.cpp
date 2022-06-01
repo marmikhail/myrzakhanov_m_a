@@ -40,7 +40,7 @@ int main() {
 
   for (int i = 0; i < img.rows; i++)
     for (int j = 0; j < img.cols; j++)
-      img3.at<float>(i, j) = sqrt(img1.at<float>(i, j) * img2.at<float>(i, j));
+      img3.at<float>(i, j) = sqrt(pow(img1.at<float>(i, j),2) + pow(img2.at<float>(i, j),2));
 
   img1.convertTo(img1, CV_8UC1);
   img2.convertTo(img2, CV_8UC1);
