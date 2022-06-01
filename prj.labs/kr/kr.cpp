@@ -27,7 +27,8 @@ int main() {
   circle(img, Point(75+149, 75), 49, 0, FILLED);
   circle(img, Point(75+149, 75+149), 49, 127, FILLED);
   circle(img, Point(75+149, 75+298), 49, 255, FILLED);
-  imshow("img", img);
+  //imshow("img", img);
+  imwrite("img.png", img);
 
   img.convertTo(img, CV_32FC1);
 
@@ -45,9 +46,12 @@ int main() {
   img2.convertTo(img2, CV_8UC1);
   img3.convertTo(img3, CV_8UC1);
 
-  imshow("img1", img1);
-  imshow("img2", img2);
-  imshow("img3", img3);
+  //imshow("img1", img1);
+  //imshow("img2", img2);
+  //imshow("img3", img3);
+  imwrite("img1.png", img1);
+  imwrite("img2.png", img2);
+  imwrite("img3.png", img3);
 
   waitKey();
   
